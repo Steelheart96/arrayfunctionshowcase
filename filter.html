@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter Function</title>
+    <script defer src="filter.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1>Array Filter Function</h1>
+            <nav>
+                <ul>
+                    <li><a href="map.html">Map</a></li>
+                    <li><a class="active" href="filter.html">Filter</a></li>
+                    <li><a href="reduce.html">Reduce</a></li>
+                </ul>
+            </nav>
+
+            <div class="description">
+
+                <div class="looks-like">
+                    <h3>What it Looks Like</h3>
+                    <p><code>myArray.filter(<span>function</span>)</code></p>
+                    <p><code>filter(<span>(element, index, array) => {...}</span>)</code></p>
+                    <p>Optional: index and array</p>
+                </div>
+
+                <div class="what-it-does">
+                    <h3>What is ".filter()" and what does it do?</h3>
+                    <p>A function for arrays.</p>
+                    <p>This function returns a <em>new</em> array</p>
+                    <p>It iterates through each item in an array.</p>
+                    <p>You can pass it a function that is executed each iteration.</p>
+                    <p>The function passed to it must return a True or False value.</p>
+                    <p>The filter function decides whether an item gets to go to the new array.</p>
+                    <p>Learn More at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">developer.mozilla.org</a>.</p>
+                </div>
+            </div>
+
+            <div class="examples">
+                <h2>Examples:</h2>
+
+                <div class="example1">
+                    <h3>Example 1</h3>
+                    <p><strong>Scenario:</strong> You have a list of numbners, but you only want to deal with the numbers that are above 40.</p>
+                    <p><strong>Input:</strong> [10, 20, 30, 40, 50, 60, 70]</p>
+                    <p><strong>Function passed:</strong> <code>function filterNumbers(number) {return number > 40}</code></p>
+                    <p><strong>Output:</strong> <span id="example1-output"></span></p>
+                </div>
+
+                <div class="example2">
+                    <h3>Example 2</h3>
+                    <p><strong>Scenario:</strong> You have a list of dictionaries that hold animal information.</br>You want to see what animals live in the mountains.</p>
+                    <p class="note">Note: Map is used in this example to put the animal name values onto the page.</br>Look at the <a href="map.html">Map</a> page to learn about the map function.</p>
+                    <p><strong>Input:</strong><code> animals = [{name: 'antelopes ', biome: 'mountains'},</br>
+                        {name: 'big horn sheep', biome: 'mountains'},</br>
+                        {name: 'mountain lions', biome: 'mountains'},</br>
+                        {name: 'catfish', biome: 'wetlands'}]</code></p>
+                    <p><strong>Function passed:</strong> <code>function choseBiome(animal) {return animal.biome == 'mountains'}</code></p>
+                    <p><strong>Output:</strong> <span id="example2-output"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
